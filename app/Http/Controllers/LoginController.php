@@ -19,19 +19,20 @@ class LoginController extends Controller
 
         if (!$user) {
             return response()->json([
-                'error' => 'Invalid credentials'
+                'error' => 'Usuário não existe'
             ], 401);
         }
 
 
         if (!$credentials['password'] == $user->password) {
             return response()->json([
-                'error' => 'Invalid credentials'
+                'error' => 'Senha errada!'
             ], 401);
         }
 
         return response()->json([
-           'message' => 'credenciado'
+           'message' => 'credenciado',
+            'obj' => $user
         ], 200);
     }
 }
