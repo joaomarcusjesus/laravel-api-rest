@@ -1,0 +1,16 @@
+.title {
+    margin: 10px;
+    text-align: center;
+    font-size: 23px;
+}
+.well {
+    margin: 30px;
+}
+
+.github {
+    text-align: center;
+    margin-top: 80px;
+}
+.github img {
+    width: 150px;
+}

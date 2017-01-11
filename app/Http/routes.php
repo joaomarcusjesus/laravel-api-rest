@@ -13,12 +13,12 @@
 
 Route::group(array('prefix' => 'apirest'), function ()
 {
+
     Route::get('/', function () {
-        return response()->json([
-            'status' => 'OK',
-            'message' => 'Bem-vindo ao Laravel 5.2~*',
-            'author' => 'JM~Heroku~'
-        ], 200);
+        return View::make("welcome")->with('rotas', array(
+            '\login' => 'LoginController method post@login => Acessar a rota de login com os paraments email e password.',
+            '\create' => 'UsersController method post@store => Cria um novo User com os paraments email, password e name'
+        ));
     });
 
     Route::post('/login', 'LoginController@login');
@@ -26,5 +26,5 @@ Route::group(array('prefix' => 'apirest'), function ()
 });
 
 Route::get('/', function () {
-   return redirect('apirest');
+    return redirect('apirest');
 });
