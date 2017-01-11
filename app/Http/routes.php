@@ -15,7 +15,9 @@ Route::group(array('prefix' => 'apirest'), function ()
 {
     Route::get('/', function () {
         return response()->json([
-            'status' => 'OK'
+            'status' => 'OK',
+            'message' => 'Bem-vindo ao Laravel 5.2~*',
+            'author' => 'JM~Heroku~'
         ], 200);
     });
 
