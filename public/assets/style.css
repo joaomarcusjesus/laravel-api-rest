@@ -14,3 +14,11 @@
 .github img {
     width: 150px;
 }
+.span {
+    margin: 10px;
+}
+.name {
+    font-size: 16px;
+    margin: 10px;
+    font-weight: bold;
+}
