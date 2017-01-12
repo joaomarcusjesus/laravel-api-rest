@@ -30,6 +30,7 @@ Route::group(array('prefix' => 'apirest'), function ()
     Route::post('/create', 'UsersController@store');
 
     Route::resource('inscritos', 'InscritosController');
+    Route::resource('trabalhos', 'TrabalhosController');
 });
 
 Route::get('/', function () {
