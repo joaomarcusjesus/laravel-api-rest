@@ -17,12 +17,23 @@ Route::group(array('prefix' => 'apirest'), function ()
     Route::get('/', function () {
         return View::make("welcome")->with('rotas', array(
             '\login' => 'LoginController method post@login => Acessar a rota de login com os paraments email e password.',
-            '\create' => 'UsersController method post@store => Cria um novo User com os paraments email, password e name'
+            '\create' => 'UsersController method post@store => Cria um novo User com os paraments email, password e name',
+            '\inscritos' => 'InscritosController method get@index => Carregar o json de todos os inscritos do banco de dados',
+            '\inscritos' => 'InscritosController method post@store => Cria um novo Inscritos com os paraments email e name',
+            '\inscritos\{id show bla}' => 'InscritosController method get@show => Mostra um Inscrito pelo id',
+            '\inscritos\{id update bla}' => 'InscritosController method put@update => Atualiza dados do inscrito passando o id',
+            '\inscritos\{id delete bla}' => 'InscritosController method delete@delete => Deleta o inscrito passando o id'
         ));
     });
 
     Route::post('/login', 'LoginController@login');
     Route::post('/create', 'UsersController@store');
+
+    Route::get('/inscritos', 'InscritosController@index');
+    Route::post('/inscritos', 'InscritosController@store');
+    Route::get('/inscritos/{id}', 'InscritosController@show');
+    Route::put('/inscritos/{id}', 'InscritosController@update');
+    Route::delete('/inscritos/{id}', 'InscritosController@delete');
 });
 
 Route::get('/', function () {

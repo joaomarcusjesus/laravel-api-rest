@@ -23,7 +23,8 @@
         <p><b>Comandos do Artisan:</b><br></p>
         <span>php artisan <b>migrate</b> => gerar as migrations da _database <br></span>
         <span> php artisan <b>db:seed</b> => gerar os dados "fakers" do _database <br></span>
-        <span>php artisan <b>serve</b> => abrir o servidor embutido do artisan</span>
+        <span>php artisan <b>serve</b> => abrir o servidor embutido do artisan <br><br></span>
+        <span style="font-size: 20px;">Para testes com requisições, usem uma ferramenta chamada Postman ou o SOAP do java</span>
     </div>
     <footer style="text-align: center;">
         <div class="github">
