@@ -29,11 +29,7 @@ Route::group(array('prefix' => 'apirest'), function ()
     Route::post('/login', 'LoginController@login');
     Route::post('/create', 'UsersController@store');
 
-    Route::get('/inscritos', 'InscritosController@index');
-    Route::post('/inscritos', 'InscritosController@store');
-    Route::get('/inscritos/{id}', 'InscritosController@show');
-    Route::put('/inscritos/{id}', 'InscritosController@update');
-    Route::delete('/inscritos/{id}', 'InscritosController@delete');
+    Route::resource('inscritos', 'InscritosController');
 });
 
 Route::get('/', function () {
